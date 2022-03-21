@@ -31,7 +31,7 @@ header {
     color: #4f9d69;
     font-weight: 600;
     /* text-decoration: underline; */
-    font-size: 15pt;
+    font-size: 17pt;
 }
 
 #logos {
@@ -74,11 +74,13 @@ header {
 
 a.post:link{
     text-decoration: none;
+    color: #191923
 
 }
 
-a.post:visted{
+a.post:visited{
     text-decoration: none;
+    color: #191923
 }
 
 a.nav-bar:link{
