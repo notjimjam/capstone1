@@ -26,10 +26,12 @@ module.exports = {
     //     .catch(err => console.log(err))
     // },
 
-    getAllposts: (req, res) => {
+    getAllPosts: (req, res) => {
         sequelize.query(`
-        SELECT *
-        FROM posts
+        SELECT p.title, p.description, i.data
+        FROM posts AS p
+        JOIN images AS i
+        ON p.id = i.post_id
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
