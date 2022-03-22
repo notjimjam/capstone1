@@ -22,35 +22,12 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 app.use(express.json())
 app.use(cors())
 
+const {getAllPosts} = require('./controller.js')
+
 app.post('/seed', seed)
 
-const userId = 3
-const postId = 4
-const imageId = 4
+app.get('/posts', getAllPosts)
 
-module.exports = {
-    getUser: (req, res) => {
-        sequelize.query(
-            `SELECT *
-            FROM users
-            WHERE id = ${userId};
-        `)
-        .then(dbRes => res.status(200).send(dbRes[0]))
-        .catch(err => console.log(err))
-    },
-
-    getPost: (req, res) => {
-        sequelize.query(`
-        SELECT *
-        FROM posts
-        WHERE id = ${postId};
-        `)
-        .then(dbRes => res.status(200).send(dbRes[0]))
-        .catch(err => console.log(err))
-    },
-    
-
-}
 
 app.listen(SERVER_PORT, () => {
     console.log(`docked at port ${SERVER_PORT}`)

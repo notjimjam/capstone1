@@ -7,6 +7,7 @@ body {
 
 header {
     display: flex;
+    width: 100%;
     background-image: url("https://images.unsplash.com/photo-1611517976630-163467322778?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
     background-size: cover;
     align-items: center;
@@ -25,7 +26,7 @@ header {
     margin: 0;
     padding: 0;
     display: inline;
-    margin-right: 50px;
+    margin-right: 5vw;
     cursor: pointer;
     text-shadow: 1px 1px 1px #191923;
     color: #4f9d69;
@@ -41,7 +42,7 @@ header {
 #main-logo {
     font-size: 50pt;
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 3vw;
     text-shadow: 2px 2px 2px #191923;
     color: #0E79b2;
     text-decoration: none;
@@ -49,7 +50,7 @@ header {
 
 #small-logo {
     font-size: 12pt;
-    margin-left: 120px;
+    margin-left: 4vw;
     font-weight: 500;
     text-shadow: 1px 1px 1px #191923;
     color: #4f9d69;
@@ -97,8 +98,8 @@ a.nav-bar:visited{
 }
 
 #works{
-    margin: 100px;
-    margin-top: 50px;
+    margin: 5vw;
+    margin-top: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
