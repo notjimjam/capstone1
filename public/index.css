@@ -62,15 +62,17 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #4f9d69;
-    margin: 20px;
-    padding: 50px;
+    /* background-color: #4f9d69; */
 }
 
 .post{
-    justify-content: center;
+    background-color: #4f9d69;
+    margin: 20px;
+    padding: 40px;
+    justify-content: space-evenly;
     align-items: center;
     cursor: pointer;
+    
 }
 
 a.post:link{
