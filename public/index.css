@@ -57,7 +57,7 @@ header {
     text-decoration: none;
 }
 
-#home {
+#post-feed {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -124,7 +124,9 @@ a.nav-bar:visited{
 }
 
 #post-form{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #post-button{

@@ -35,7 +35,7 @@ module.exports = {
             CREATE TABLE images (
                 id SERIAL PRIMARY KEY,
                 post_id INT REFERENCES posts(id) NOT NULL,
-                data BYTEA
+                data TEXT
             );
 
             CREATE TABLE comments (

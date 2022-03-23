@@ -22,11 +22,14 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 app.use(express.json())
 app.use(cors())
 
-const {getAllPosts} = require('./controller.js')
+const {getAllPosts, getUser} = require('./controller.js')
 
 app.post('/seed', seed)
 
 app.get('/posts', getAllPosts)
+
+//used as a tester
+app.get('/users', getUser)
 
 
 app.listen(SERVER_PORT, () => {
