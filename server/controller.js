@@ -11,11 +11,13 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
     }
 })
 
-// let posts = sequelize.define('posts',{
-//     user_id: Sequelize.INTEGER,
-//     title: Sequelize.TEXT,
-//     description: Sequelize.TEXT
-// })
+let posts = sequelize.define('posts',{
+    user_id: Sequelize.INTEGER,
+    title: Sequelize.TEXT,
+    description: Sequelize.TEXT
+},{
+    timestamps: false
+})
 
 // let images = sequelize.define('images', {
 //     post_id: Sequelize.INTEGER,
@@ -23,7 +25,7 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 // })
 
 const userId = 1
-const postId = 4
+const postId = 2
 const imageId = 4
 
 module.exports = {
@@ -32,8 +34,9 @@ module.exports = {
         sequelize.query(`
         SELECT p.title, p.description, i.data
         FROM posts AS p
-        JOIN images AS i
-        ON p.id = i.post_id
+        LEFT JOIN images AS i
+        ON p.id = i.post_id 
+        ORDER BY p.id DESC
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
@@ -59,28 +62,18 @@ module.exports = {
             .catch(err => console.log(err))
         },
     
-    // makeNewPost: (req, res) => {
-    //     console.log('req', req.body)
+    makeNewPost: (req, res) => {
+        console.log('i love requests', req.body)
+        
+        return posts.create({
+            user_id: userId,
+            title: req.body.title,
+            description: req.body.desc
+        }).then(function (posts) {
+            res.redirect('http://127.0.0.1:5501/public/index.html')
+        })
 
-    //     return posts.create({
-    //         user_id: userId,
-    //         title: req.body.title,
-    //         description: req.body
-    //     }).then(function (posts) {
-    //         if(posts) {
-    //             res.send(posts[0])
-    //         } else {
-    //             res.status(400).send('error in creating new post')
-    //         }
-    //     })
-
-    //     // return images.create({
-    //     //     post_id: postId,
-    //     //     data: req.body.data
-    //     // })
-
-    
-    // }
+    }
     
         
     }

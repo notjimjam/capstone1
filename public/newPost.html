@@ -22,18 +22,21 @@
 
     <section id="new-post">
         <h2 id="post-h2">add new post</h2>
-        <form id="post-form">
+        <form id="post-form" action="http://localhost:4003/newPost" method="post">
             <label for="image">Image</label>
-            <input type= "file" id="image" placeholder="add image link">
+            <input type= "file" id="image" name="image" placeholder="add image link">
+
             <label for="title">Title</label>
-            <input id="title" type="text" placeholder="puzzle name by company">
+            <input id="title" type="text" name="title" placeholder="puzzle name by company">
+           
             <label for="desc">Description</label>
-            <input id="desc" type="text" placeholder="anything you feel is important">
+            <input id="desc" type="text" name="desc" placeholder="anything you feel is important">
+           
             <input type="submit" id="submit-button">
         </form>
         
     </section>
 
-    <script src="index.js"></script>
+    <script src="newPost.js"></script>
 </body>
 </html>

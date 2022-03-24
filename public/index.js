@@ -1,4 +1,5 @@
-const postFeed = document.querySelector('#post-feed')
+const postFeed = document.querySelector('.post-feed')
+const template = document.querySelector("#post")
 
 // function createNewPost() {
 //     let postDiv = document.createElement('div')
@@ -12,11 +13,28 @@ function clearFeed() {
 function loadPosts() {
     clearFeed()
 
-    axios.get('/posts')
+    fetch('http://localhost:4003/posts')
     .then(res => {
-        const dataArr = res.data
-        console.log(dataArr)
+        return res.json()
 
-    }) .catch(err => console.log(err))
+    }) .then(dataArr => {
+        console.log(dataArr)
+        
+        dataArr.forEach(item => {
+            const post = template.content.cloneNode(true)
+            const title = post.querySelector(".title")
+           
+            title.innerText = item.title
+            // http://localhost:4003/post?id=544
+            // const parsedUrl = new URL(window.location.href);
+            // const id = parsedUrl.searchParams.get("id")
+            postFeed.appendChild(post)
+
+            window.location.search // ?id=544
+        })
+    }) 
+    .catch(err => console.log(err))
 }
 
+
+loadPosts()
