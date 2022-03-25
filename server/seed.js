@@ -51,9 +51,9 @@ module.exports = {
             (2, 'puzzlemaster', 'pm@yahoo.com', 'asdf');
             
             INSERT INTO posts (id, user_id, title, description)
-            VALUES (1, 1, 'Cityscape by Annonymus', 'insert description here'),
-            (2, 1, 'Big Green Tractor by John Doe', 'insert description here'),
-            (3, 2, 'Brooklyn Bride by Ravensburger', 'insert description here');
+            VALUES (1, 1, 'Cityscape by B&W', 'insert description here'),
+            (2, 1, 'Big Green Tractor by John Deer', 'insert description here'),
+            (3, 2, 'Brooklyn Bridge by Ravensburger', 'insert description here');
             
             ALTER SEQUENCE posts_id_seq RESTART WITH 4;
             ALTER SEQUENCE users_id_seq RESTART WITH 3;

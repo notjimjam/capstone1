@@ -23,14 +23,14 @@ function loadPosts() {
         dataArr.forEach(item => {
             const post = template.content.cloneNode(true)
             const title = post.querySelector(".title")
+            const postLink = post.querySelector('.post-link') 
+
+
+            postLink.href =`/public/post.html?id=${item.id}`
            
             title.innerText = item.title
-            // http://localhost:4003/post?id=544
-            // const parsedUrl = new URL(window.location.href);
-            // const id = parsedUrl.searchParams.get("id")
-            postFeed.appendChild(post)
 
-            window.location.search // ?id=544
+            postFeed.appendChild(post)
         })
     }) 
     .catch(err => console.log(err))

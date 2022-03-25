@@ -25,14 +25,14 @@ let posts = sequelize.define('posts',{
 // })
 
 const userId = 1
-const postId = 2
+const postId = 1
 const imageId = 4
 
 module.exports = {
     
     getAllPosts: (req, res) => {
         sequelize.query(`
-        SELECT p.title, p.description, i.data
+        SELECT p.title, p.description, p.id, i.data
         FROM posts AS p
         LEFT JOIN images AS i
         ON p.id = i.post_id 
@@ -53,10 +53,12 @@ module.exports = {
         },
         
         getPost: (req, res) => {
+            console.log('request', req.params.id)
+            const pId = req.params.id
             sequelize.query(`
             SELECT *
             FROM posts
-            WHERE id = ${postId};
+            WHERE id = ${pId};
             `)
             .then(dbRes => res.status(200).send(dbRes[0]))
             .catch(err => console.log(err))

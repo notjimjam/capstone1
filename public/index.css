@@ -133,3 +133,35 @@ a.nav-bar:visited{
     cursor: pointer;
 }
 
+.post-feed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post-body{
+    background-color: #4f9d69;
+}
+
+a.post-link:link {
+    text-decoration: none;
+    color: #191923 
+}
+
+a.post-link:visited {
+    text-decoration: none;
+    color: #191923
+}
+
+.post-page{
+    margin: 100px;
+}
+
+.single-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
