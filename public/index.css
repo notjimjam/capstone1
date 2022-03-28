@@ -146,8 +146,10 @@ a.post-link:visited {
     color: #191923
 }
 
+/* individual post page */
+
 .post-page{
-    margin: 100px;
+    margin: 75px;
 }
 
 .single-post{
@@ -155,6 +157,40 @@ a.post-link:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.post-title {
+    color:#FBFEF9;
+    background-color: #4f9d69;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24pt;
+    text-shadow: 1px 1px 1px #191923;
+    box-shadow: 2px 2px 2px grey
+}
+
+.post-image {
+    margin-top: 30px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 2px 2px 2px grey;
+    /* border: solid 5px #191923 */
+}
+
+.post-image:hover {
+    transform:scale(2);
+    object-fit: contain;
+    box-shadow: none
+}
+
+.post-desc{
+    font-size: 16pt;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+    text-align: center;
+
 }
 
 /* how it works page styling */
@@ -205,11 +241,13 @@ a.post-link:visited {
 }
 
 input {
-    border: solid 1px #191923
+    border: solid 1px #191923;
+    width: 80%;
 }
 
 textarea {
-    border: solid 1px #191923
+    border: solid 1px #191923;
+    width: 80%
 }
 
 label {

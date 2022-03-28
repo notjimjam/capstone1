@@ -1,6 +1,7 @@
 
 const postPage = document.querySelector('.post-page')
 const div = document.querySelector('.single-post')
+const img = document.querySelector('.post-image')
 
 
 function clearPost() {
@@ -40,5 +41,6 @@ function onePost() {
     })
     .catch(err => console.log(err))
 }
+
 
 onePost()
