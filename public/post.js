@@ -28,9 +28,11 @@ function onePost() {
 
             const postTitle = document.querySelector('.post-title')
             const postDescription = document.querySelector('.post-desc')
+            const postImage = document.querySelector('.post-image')
 
             postTitle.innerText = item.title
             postDescription.innerText = item.description
+            postImage.src = item.image
             postPage.appendChild(div)
             
         })

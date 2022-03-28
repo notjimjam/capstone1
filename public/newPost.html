@@ -24,14 +24,17 @@
         <h2 id="post-h2">add new post</h2>
         <form id="post-form" action="http://localhost:4003/newPost" method="post">
             <label for="image">Image</label>
-            <input type= "file" id="image" name="image" placeholder="add image url">
+            <input type= "url" id="image" name="image" placeholder="add image url" required>
+            <br>
 
             <label for="title">Title</label>
-            <input id="title" type="text" name="title" placeholder="puzzle title by author">
-           
+            <input id="title" type="text" name="title" placeholder="puzzle title by author" required>
+            <br>
+
             <label for="desc">Description</label>
-            <input id="desc" type="text" name="desc" placeholder="anything you feel is important">
-           
+            <textarea id="desc" type="text" name="desc" placeholder="anything you feel is important: how many pieces, strategies, etc." rows="5"></textarea>
+            <br>
+
             <input type="submit" id="submit-button">
         </form>
         

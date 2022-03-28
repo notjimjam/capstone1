@@ -14,7 +14,8 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 let posts = sequelize.define('posts',{
     user_id: Sequelize.INTEGER,
     title: Sequelize.TEXT,
-    description: Sequelize.TEXT
+    description: Sequelize.TEXT,
+    image: Sequelize.TEXT
 },{
     timestamps: false
 })
@@ -32,10 +33,8 @@ module.exports = {
     
     getAllPosts: (req, res) => {
         sequelize.query(`
-        SELECT p.title, p.description, p.id, i.data
+        SELECT p.title, p.description, p.id, p.image
         FROM posts AS p
-        LEFT JOIN images AS i
-        ON p.id = i.post_id 
         ORDER BY p.id DESC
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
@@ -52,17 +51,17 @@ module.exports = {
             .catch(err => console.log(err))
         },
         
-        getPost: (req, res) => {
-            console.log('request', req.params.id)
-            const pId = req.params.id
-            sequelize.query(`
-            SELECT *
-            FROM posts
-            WHERE id = ${pId};
-            `)
-            .then(dbRes => res.status(200).send(dbRes[0]))
-            .catch(err => console.log(err))
-        },
+    getPost: (req, res) => {
+        console.log('request', req.params.id)
+        const pId = req.params.id
+        sequelize.query(`
+        SELECT *
+        FROM posts
+        WHERE id = ${pId};
+        `)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
+    },
     
     makeNewPost: (req, res) => {
         console.log('i love requests', req.body)
@@ -70,7 +69,8 @@ module.exports = {
         return posts.create({
             user_id: userId,
             title: req.body.title,
-            description: req.body.desc
+            description: req.body.desc,
+            image: req.body.image
         }).then(function (posts) {
             res.redirect('http://127.0.0.1:5501/public/index.html')
         })
@@ -79,3 +79,11 @@ module.exports = {
     
         
     }
+
+
+    // SELECT p.title, p.description, p.id, i.data
+    //     FROM posts AS p
+    //     LEFT JOIN images AS i
+    //     ON p.id = i.post_id 
+    //     ORDER BY p.id DESC
+    //     `)
