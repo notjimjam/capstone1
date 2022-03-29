@@ -90,7 +90,7 @@ module.exports = {
             ', 'https://i.ytimg.com/vi/ECxkImGlrFg/maxresdefault.jpg');
             
             
-            ALTER SEQUENCE posts_id_seq RESTART WITH 4;
+            ALTER SEQUENCE posts_id_seq RESTART WITH 9;
             ALTER SEQUENCE users_id_seq RESTART WITH 3;
 
             `).then(() => {

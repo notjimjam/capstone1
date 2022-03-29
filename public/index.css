@@ -150,6 +150,7 @@ a.post-link:visited {
 
 .post-page{
     margin: 75px;
+    border: outset #4f9d69 10px
 }
 
 .single-post{
@@ -160,13 +161,13 @@ a.post-link:visited {
 }
 
 .post-title {
-    color:#FBFEF9;
-    background-color: #4f9d69;
+    color:#0E79b2;
+    /* background-color: #4f9d69; */
     border-radius: 10px;
     padding: 10px;
     font-size: 24pt;
     text-shadow: 1px 1px 1px #191923;
-    box-shadow: 2px 2px 2px grey
+    /* box-shadow: 2px 2px 2px grey */
 }
 
 .post-image {
@@ -190,14 +191,18 @@ a.post-link:visited {
     margin-right: 20%;
     margin-top: 50px;
     text-align: center;
+    /* border: outset 10px #0E79b2; */
+
+
 
 }
 
 /* how it works page styling */
 
 #works{
-    margin: 20vw;
-    margin-top: 3vw;
+    margin: 4rem;
+    margin-left: 20%;
+    margin-right:20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,7 +217,10 @@ a.post-link:visited {
 }
 
 #works-p{
+    border: outset 6px #4f9d69;
     font-size: 17pt;
+    padding:30px
+    /* margin-bottom: 3rem; */
 }
 
 /* new post page styling */
@@ -226,11 +234,13 @@ a.post-link:visited {
 }
 
 #post-form{
+    border: outset 6px #4f9d69;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 40%;
+    padding: 20px
 }
 
 #post-h2 {
