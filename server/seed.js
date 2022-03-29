@@ -67,13 +67,19 @@ module.exports = {
             
             I just picked up the puzzle at Target. I found it in the game section, not with the puzzles. Hope you love it as much as I did.
             ', 'https://preview.redd.it/zu29ysz32ds51.jpg?width=640&crop=smart&auto=webp&s=ed3c25273d0692f949888c568c1e6dfc4c520c37'),
-            (6, 2, 'Minifigures Face by Lego', 'LEGO LOVERS and PUZZLERS UNITE! 
+
+            (6, 1, 'The One Million Dollar Puzzle by MSCHF', 'I’m just going to start off by saying that I am not millionaire and I am pretty sad about that. This puzzle was difficult because of the QR code running throughout, but the bright colors made it easier to match like pieces. I separated it by color and it made it pretty straight forward from there. The pieces that happened to be all black were matched based on shape and pure guessing sometimes. It was a fun challenge simply because of the idea that MAYBE just MAYBE you could be a millionaire at the end of it. Yes it is very gimmicky, but I had a good time putting together this 500 piece puzzle.
+
+            They are still selling this on amazon if you are interested: https://www.amazon.com/ONE-MILLION-DOLLAR-PUZZLE-MSCHF/dp/B099MY2173
+            ', 'https://helios-i.mashable.com/imagery/articles/07APPUy4KcBeJ29ag43EX75/hero-image.fill.size_1248x702.v1637340567.jpg'),
+
+            (7, 2, 'Minifigures Face by Lego', 'LEGO LOVERS and PUZZLERS UNITE! 
 
             Honestly, this is the best of both worlds. This 1000 piece, yellow monstrosity was a CHALLENGE! Let me tell you. If anyone has a good idea for better ways to approach this, reach out. I went into this like I would any other puzzle and it was TOUGH! It took several days to complete because every piece looked the same as the next. I really could have used a 30 page pamphlet with detailed step by step instructions like you get building a lego set to get through this quicker. Despite the negativity, I had a BLAST doing this and look forward to picking up more of these lego puzzles in the future.
             
             Join the mayhem: https://www.amazon.com/Minifigure-Faces-Piece-Jigsaw-Puzzle/dp/179721019X/ref=sr_1_2?keywords=LEGO+Puzzle&qid=1648491754&sr=8-2
             ', 'https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781797210193_LEGOMinifigureFacesPuzzle_TopViewPuzzle.jpg?v=1618349341'),
-            (7, 1, 'Mars by NASA', 'My 7 year old loved putting this puzzle together with me! Her space obsession is bleeding into every aspect of our lives, even puzzling isn’t safe. With that being said, this puzzle was a blast to complete with her. The overall shape was unique- adding a fun challenge. There wasn’t much in variety of the color, which made it that more challenging. While it was a relatively small puzzle for an adult, it was great to put together with a kid. We will definitely be doing another one of these soon, as my daughter insists on completing the whole solar system. 
+            (8, 1, 'Mars by NASA', 'My 7 year old loved putting this puzzle together with me! Her space obsession is bleeding into every aspect of our lives, even puzzling isn’t safe. With that being said, this puzzle was a blast to complete with her. The overall shape was unique- adding a fun challenge. There wasn’t much in variety of the color, which made it that more challenging. While it was a relatively small puzzle for an adult, it was great to put together with a kid. We will definitely be doing another one of these soon, as my daughter insists on completing the whole solar system. 
 
             Got a link for you if you’re interested: https://www.chroniclebooks.com/products/mars-100-piece-puzzle
             
@@ -81,16 +87,22 @@ module.exports = {
             
             May the force be with you or whatever the kids are saying now days.
             ', 'https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781452181127.pt02_2048x2048.jpg?v=1618351405'),
-            (8, 2, 'Gradient by Cloudberries', 'This puzzle was surprisingly a good time. I purchased this 1000 piece puzzle from Barnes and Noble hoping it would provide a different type of challenge. It did not disappoint! My partner and I were able to complete this in a single night, dividing the pieces into colors. It made it easier to complete building from the outside in due to the vibrancy of the pieces on the outside. By the time we made it to the middle, the pieces were really light. We had a great time doing it and thought it was much easier to complete than we originally thought. 
+            (9, 2, 'Gradient by Cloudberries', 'This puzzle was surprisingly a good time. I purchased this 1000 piece puzzle from Barnes and Noble hoping it would provide a different type of challenge. It did not disappoint! My partner and I were able to complete this in a single night, dividing the pieces into colors. It made it easier to complete building from the outside in due to the vibrancy of the pieces on the outside. By the time we made it to the middle, the pieces were really light. We had a great time doing it and thought it was much easier to complete than we originally thought. 
 
             Here is the link to buy from the source if you are interested: https://www.cloudberries.co.uk/product/amazing-gradient-jigsaw-puzzle-for-adults-1000-pieces/
             
             Good luck puzzling!!
             
-            ', 'https://i.ytimg.com/vi/ECxkImGlrFg/maxresdefault.jpg');
+            ', 'https://i.ytimg.com/vi/ECxkImGlrFg/maxresdefault.jpg'),
+
+            (10, 1, 'Infinite Galaxy 2 by Nervous System', 'Let’s just start by saying WOW! Just wow. This is the most beautiful puzzle I have ever seen. The pieces are stunning and the quality is excellent. I’m not going to lie to you. This puzzle is very pricey, but I personally think it is worth it. This puzzle is called infinite for a reason. If you are going into this puzzle thinking you’ll solve this, you better think again. There are so many ways to approach this and that, I think, is the fun of it. It is easily the most unique experience I have had when puzzling. I hope one day to invest in another one of their creations. This is something I can see leaving on a table for people to experience.
+
+            If you want to go through this experience with me, here is the link to buy it from my modern met: https://store.mymodernmet.com/products/infinite-galaxy-puzzle-2
+            ', 'https://cdn.shopify.com/s/files/1/2433/0703/products/infinity-puzzle-2-nervous-system-3_1000x1000.jpg?v=1557721348');
+
             
             
-            ALTER SEQUENCE posts_id_seq RESTART WITH 9;
+            ALTER SEQUENCE posts_id_seq RESTART WITH 11;
             ALTER SEQUENCE users_id_seq RESTART WITH 3;
 
             `).then(() => {

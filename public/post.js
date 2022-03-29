@@ -1,7 +1,7 @@
 
 const postPage = document.querySelector('.post-page')
 const div = document.querySelector('.single-post')
-const img = document.querySelector('.post-image')
+// const img = document.querySelector('.post-image')
 
 
 function clearPost() {

@@ -15,7 +15,7 @@ header {
     background-image: url("https://images.unsplash.com/photo-1611517976630-163467322778?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
     background-size: cover;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
 
 }
 #nav{
@@ -24,13 +24,12 @@ header {
     flex: 1;
     margin: 0;
     padding: 0;
-    /* text-align: right; */
 }
 #nav li{
     margin: 0;
     padding: 0;
     display: inline;
-    margin-right: 5vw;
+    margin-right: 6rem;
     cursor: pointer;
     text-shadow: 1px 1px 1px #191923;
     color: #4f9d69;
@@ -40,13 +39,14 @@ header {
 }
 
 #logos {
-    display: block ;
+    display: block;
+    justify-content: center;
 }
 
 #main-logo {
     font-size: 50pt;
     font-weight: bold;
-    margin-left: 3vw;
+    margin-left: 3rem;
     text-shadow: 2px 2px 2px #191923;
     color: #0E79b2;
     text-decoration: none;
@@ -54,7 +54,7 @@ header {
 
 #small-logo {
     font-size: 12pt;
-    margin-left: 4vw;
+    margin-left: 5rem;
     font-weight: 500;
     text-shadow: 1px 1px 1px #191923;
     color: #4f9d69;
