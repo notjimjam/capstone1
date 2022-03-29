@@ -10,7 +10,7 @@ function clearFeed() {
 function loadPosts() {
     clearFeed()
 
-    fetch('/posts')
+    fetch('http://localhost:4003/posts')
     .then(res => {
         return res.json()
 
