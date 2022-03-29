@@ -72,7 +72,7 @@ module.exports = {
             description: req.body.desc,
             image: req.body.image
         }).then(function (posts) {
-            res.redirect('http://127.0.0.1:5501/public/index.html')
+            res.redirect('/public/index.html')
         })
 
     }
