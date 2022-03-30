@@ -22,44 +22,54 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
     }
 })
 
-//static endpoints for deployment
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/'))
-})
-
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"))
-})
-
-app.get("/js", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.js"))
-})
-
-app.get("/styles", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
-}) 
-
-app.get("/works", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
-})
-
-app.get("/posts", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
-})
-
-app.get("/newPost", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/newPost.html")))
-})
-
-
-app.use(express.static(path.join(__dirname, "../public")))
-
 app.use(express.json())
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const {getAllPosts, getUser, makeNewPost, getPost} = require('./controller.js')
+
+//static endpoints for deployment
+
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../public/'))
+// })
+
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/index.html"))
+// })
+
+// app.get("/js", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/index.js"))
+// })
+
+// app.get("/styles", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
+// }) 
+
+// app.get("/works", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
+// })
+
+// app.get("/posts", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
+// })
+
+// app.get("/post.js", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/post.js"))
+// })
+
+// app.get("/newPost", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/newPost.html")))
+// })
+
+// app.get("/newPost.js", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/newPost.js"))
+// })
+
+
+// app.use(express.static(path.join(__dirname, "../public")))
+
+
 
 app.post('/seed', seed)
 
