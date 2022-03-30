@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-const {SERVER_PORT} = process.env
+const SERVER_PORT = process.env.PORT || 4003
 const{seed} = require('./seed.js')
 const Sequelize = require('sequelize')
 
@@ -37,6 +37,8 @@ app.get('/users', getUser)
 app.post('/newPost', makeNewPost)
 
 app.get('/posts/:id', getPost)
+
+
 
 app.listen(SERVER_PORT, () => {
     console.log(`docked at port ${SERVER_PORT}`)

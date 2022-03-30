@@ -18,7 +18,7 @@ function onePost() {
 
     window.location.search // ?id=544
 
-    fetch(`http://localhost:4003/posts/${id}`)
+    fetch(`/posts/${id}`)
     .then(res => {
         return res.json()
 
