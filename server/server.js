@@ -4,6 +4,7 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const app = express()
 
@@ -20,6 +21,12 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
         timestamps: false
     }
 })
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
+
+app.use(express.static(path.join(__dirname, "../public")))
 
 app.use(express.json())
 app.use(cors())
