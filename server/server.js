@@ -31,41 +31,41 @@ const {getAllPosts, getUser, makeNewPost, getPost} = require('./controller.js')
 
 // static endpoints for deployment
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/'))
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../public/'))
+// })
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"))
 })
 
-app.get("/js", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.js"))
-})
+// app.get("/js", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/index.js"))
+// })
 
-app.get("/styles", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
-}) 
+// app.get("/styles", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
+// }) 
 
-app.get("/works", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
-})
+// app.get("/works", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
+// })
 
-app.get("/posts", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
-})
+// app.get("/posts", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
+// })
 
-app.get("/post.js", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/post.js"))
-})
+// app.get("/post.js", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/post.js"))
+// })
 
-app.get("/newPost", (req, res) =>  {
-    res.sendFile(path.join(path.join(__dirname, "../public/newPost.html")))
-})
+// app.get("/newPost", (req, res) =>  {
+//     res.sendFile(path.join(path.join(__dirname, "../public/newPost.html")))
+// })
 
-app.get("/newPost.js", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/newPost.js"))
-})
+// app.get("/newPost.js", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../public/newPost.js"))
+// })
 
 
 app.use(express.static(path.join(__dirname, "../public")))
