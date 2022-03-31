@@ -9,6 +9,7 @@ const path = require('path')
 const app = express()
 
 const SERVER_PORT = process.env.PORT || 4003
+
 const{seed} = require('./seed.js')
 const Sequelize = require('sequelize')
 
