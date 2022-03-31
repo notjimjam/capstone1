@@ -47,21 +47,21 @@ app.get("/", (req, res) => {
 //     res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
 // }) 
 
-// app.get("/works", (req, res) =>  {
-//     res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
-// })
+app.get("/works", (req, res) =>  {
+    res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
+})
 
-// app.get("/posts", (req, res) =>  {
-//     res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
-// })
+app.get("/posts", (req, res) =>  {
+    res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
+})
 
 // app.get("/post.js", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../public/post.js"))
 // })
 
-// app.get("/newPost", (req, res) =>  {
-//     res.sendFile(path.join(path.join(__dirname, "../public/newPost.html")))
-// })
+app.get("/newPost", (req, res) =>  {
+    res.sendFile(path.join(path.join(__dirname, "../public/newPost.html")))
+})
 
 // app.get("/newPost.js", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../public/newPost.js"))
