@@ -12,11 +12,11 @@ function onePost() {
     clearPost()
 
     // http://localhost:4003/posts?id=
-    const parsedUrl = new URL(window.location.href);
-    console.log(parsedUrl.searchParams.get("id")); // "123"
-    const id = parsedUrl.searchParams.get("id")
+    // const parsedUrl = new URL(window.location.href);
+    // console.log(parsedUrl.searchParams.get("id")); // "123"
+    // const id = parsedUrl.searchParams.get("id")
 
-    window.location.search // ?id=544
+    // window.location.search // ?id=544
 
     fetch(`/posts/${id}`)
     .then(res => {
