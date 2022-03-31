@@ -24,7 +24,7 @@ function loadPosts() {
             const postImage = post.querySelector('.home-image')
 
 
-            postLink.href =`/public/posts?id=${item.id}`
+            postLink.href =`/public/posts/${item.id}`
            
             title.innerText = item.title
             postImage.src = item.image
