@@ -51,7 +51,7 @@ app.get("/works", (req, res) =>  {
     res.sendFile(path.join(path.join(__dirname, "../public/works.html")))
 })
 
-app.get("/public/posts/1", (req, res) =>  {
+app.get("/post", (req, res) =>  {
     res.sendFile(path.join(path.join(__dirname, "../public/post.html")))
 })
 
