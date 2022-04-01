@@ -10,7 +10,7 @@ function clearFeed() {
 function loadPosts() {
     clearFeed()
 
-    fetch('/posts')
+    fetch('http://localhost:4003/posts')
     .then(res => {
         return res.json()
 
@@ -24,7 +24,7 @@ function loadPosts() {
             const postImage = post.querySelector('.home-image')
 
 
-            postLink.href =`/public/post?id=${item.id}`
+            postLink.href =`/public/post.html?id=${item.id}`
            
             title.innerText = item.title
             postImage.src = item.image

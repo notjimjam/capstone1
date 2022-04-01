@@ -2,9 +2,7 @@ require('dotenv').config()
 
 const Sequelize = require('sequelize')
 
-const { CONNECTION_STRING } = process.env
-
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
@@ -74,7 +72,7 @@ module.exports = {
             description: req.body.desc,
             image: req.body.image
         }).then(function (posts) {
-            res.redirect('https://puzzling1.herokuapp.com/')
+            res.redirect('http://127.0.0.1:5501/public/index.html')
         })
 
     }
